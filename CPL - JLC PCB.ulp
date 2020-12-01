@@ -1,0 +1,61 @@
+/*
+ *  This EAGLE User Language Program creates the proper format
+ *  Centroid file for assembly at JLCPCB.com including
+ *  the reference designator, position, layer and orientation
+ *  of each part
+ *
+ *
+ *  Version 1.0,  Nov 22, 2020
+ *
+ *  Original file by www.screamingcircuits.com
+ *  Rewritten by Combinatix to match JLCPCB specs
+ *
+ */
+
+#usage "en: <b>Export a CPL file for manufacturing at JLC PCB.com</b>\n"
+			"<p>"
+			"Generates a <i>Centroid</i> data file"
+			"</p>"
+			"<author>Original idea by: www.screamingcircuits.com</author><br>"
+			"<author>Rewritten by Combinatix to match JLCPCB specs</author><br>"
+
+string rotation(real Angle) {
+	string s;
+	sprintf(s, "%.1f", Angle);
+	for (int i = 0; s[i]; i++) {
+		if (s[i] == '.') {
+			if (s[i + 1] == '0') s[i] = 0;
+			break;
+		}
+	}
+	return s;
+}
+
+string side(int Mirror) {
+	// Returns String "Top" or "Bottom"
+	string s;
+	if (Mirror == 0) {
+		s = "Top";
+	} else {
+		s = "Bottom";
+	}
+	return s;
+}
+
+if (board) board(B) {	// If the script is executed from Board Editor
+	// Create the csv file using "ProjectName.JLC_PCB.csv"
+	output(filesetext(B.name, ".JLC_CPL.csv")) {
+		printf("%s,%s,%s,%s,%s\n", "Designator", "Mid X", "Mid Y", "Rotation", "Layer");
+		B.elements(E) {					// loop thru all elements
+			int isSmd = 0;
+			E.package.contacts(C) {		// loop thru all part's pads
+				if (C.smd) isSmd = 1;
+			}
+			if (isSmd) printf("%s,%5.3f,%5.3f,%s,%s\n", E.name, u2mm(E.x), u2mm(E.y), rotation(E.angle), side(E.mirror));
+		}
+	}
+	dlgMessageBox(";File " + filesetext(B.name, ".JLC_CPL.csv") + " was successfully created");
+} else {
+	// Script is executed from Schematics Editor - Display an error message
+	dlgMessageBox("!This ULP can be executed only from Board Editor\n\nNo file has been created");
+}
