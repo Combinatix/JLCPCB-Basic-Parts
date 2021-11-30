@@ -1,0 +1,173 @@
+/*
+Copyright 2019 OXullo Intersecans <x@brainrapers.org>
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+This ULP script was modified by Combinatix to match his JLCPCB-Basic-Parts.lbr
+Project home: https://github.com/Combinatix/JLCPCB-Basic-Parts
+
+*/
+
+// Note: the following eagle-bundled ULPs have been used as a guidance:
+// * mountsmd.ulp
+// * bom.ulp
+// * cmd-change-swap-layer.ulp
+// * centroid-screamingcircuits-smd.ulp
+
+
+#usage "<h1>JLCPCB BOM/CPL files generator</h1>\n"
+       "<h2>Generates BOM and CPL files for JLCPCB SMT assembly service</h2>"
+       "<a href='https://jlcpcb.com/'>https://jlcpcb.com/</a>"
+       "<p>Run the ULP from the board editor</p>"
+       "<p>Modified by Combinatix to match his JLCPCB-Basic-Parts.lbr</p>"
+       "<h3>Project home: <a href='https://github.com/Combinatix/JLCPCB-Basic-Parts'>https://github.com/Combinatix/JLCPCB-Basic-Parts</a></h3>"
+       "<author>Author: OXullo Intersecans x@brainrapers.org</author>"
+
+// ________________________________________________________________________________________________________________________________
+// Globals
+
+int layer_id_map[] = { 1, 16 };
+UL_ELEMENT selected_elements[];
+string layer_name_map[] = { "Top", "Bottom" };
+
+// ________________________________________________________________________________________________________________________________
+// Functions
+
+string intToString(int cislo){
+	string str = "";
+	sprintf(str, "%d", cislo);
+	return str;
+}
+
+string replace_commas(string s) {		// Convert commas to spaces
+    while (strstr(s, ",") >= 0) {  
+        string substitution_string = " ";
+        sprintf(s, "%s%s%s", strsub(s, 0, strstr(s, ",")), substitution_string, strsub(s, strstr(s, ",")+1));
+    }
+    return s;
+}
+
+// ________________________________________________________________________________________________________________________________
+// Main
+
+if (board) board(B) {
+	// Main procedure
+    string txt;
+    int layer_choice = 0;
+	
+	// Choose Layer
+    dlgDialog("Layer selection") {
+        dlgGroup("Export layer") {
+            dlgRadioButton("&Top", layer_choice);
+            dlgRadioButton("&Bottom", layer_choice);
+        }
+        dlgPushButton("OK") dlgAccept();
+    };
+	
+	// Choose Folder - useless
+    // string output_dir = dlgDirectory("Export files to", filedir(B.name));
+    // if (output_dir == "") {
+        // exit(0);
+    // }
+	
+	// Loop thru all populated SMD elements
+    int element_count = 0;
+    B.elements(E) if (E.populate) {
+        E.package.contacts(C) {
+            if (C.smd && C.smd.layer == layer_id_map[layer_choice]) {
+                selected_elements[element_count++] = E;
+                break;
+            }
+        }
+    }
+	
+	// Create File Names
+    // string base_path = (output_dir + "/" + // Deprecated - Save the mouse clicks, save the planet.
+    string base_path = (strsub(filename(B.name), 0, strlen(filename(B.name)) - 4) +
+        "_" + strlwr(layer_name_map[layer_choice]));
+    string cpl_filename = base_path + "_cpl.csv";
+    string bom_filename = base_path + "_bom.csv";
+	
+	// Write CPL file
+    output(cpl_filename) {
+        printf("Designator,Mid X,Mid Y,Layer,Rotation\n");
+
+        for (int i = 0 ; i < element_count ; ++i) {
+            UL_ELEMENT E = selected_elements[i];
+            int angle = E.angle + 180;
+			// Add attribute rotation correction
+            E.attributes(A) {
+                if (A.name == "LCSC_ROTATION_CCW") {
+                    angle = angle + strtol(A.value);
+					if (angle >= 360){
+						angle = angle - 360;
+					}
+                }
+            }
+			// Mirror the part when Bottom Layer - not needed aymore
+            // if (layer_name_map[layer_choice] == "Bottom") {
+				// angle = angle + 180;
+					// if (angle >= 360){
+						// angle = angle - 360;
+					// }
+				// angle = (360 - angle);
+				// angle = angle + 180;
+				// angle = angle % 360;
+            // }
+            real ang = angle;
+            printf("%s,%5.2f,%5.2f,%s,%.1f\n", E.name, u2mm(E.x), u2mm(E.y), layer_name_map[layer_choice], ang);
+        }
+    }
+
+	// Write BOM file
+    output(bom_filename) {
+        int i;
+        int indexes[];
+        numeric string values[];
+
+        for (i=0 ; i < element_count ; ++i) {
+            indexes[i] = i;
+            values[i] = selected_elements[i].value;
+        }
+        sort(element_count, indexes, values);
+        printf("Comment,Designator,Footprint,LCSC Part #\n");
+
+        string current_value = "";
+        string current_footprint = "";
+        string current_lscpart = "";
+        string designators = "";
+
+        for (i = 0 ; i < element_count ; ++i) {
+            UL_ELEMENT E = selected_elements[indexes[i]];
+
+            if (current_value != "" && (E.value != current_value || E.footprint.name != current_footprint)) {
+                printf("%s,%s,%s,%s\n", current_value, designators, current_footprint, current_lscpart);
+                designators = "";
+            }
+
+            if (designators != "") {
+                designators += " ";
+            }
+            designators += E.name;
+            current_value = replace_commas(E.value);
+            current_footprint = replace_commas(E.footprint.name);
+            current_lscpart = "";
+
+            E.attributes(A) {
+                if (A.name == "LCSC_PART") {
+                    current_lscpart = replace_commas(A.value);
+                }
+            }
+        }
+        if (current_value != "") {
+          printf("%s,%s,%s,%s\n", current_value, designators, current_footprint, current_lscpart);
+        }
+    }
+
+	dlgMessageBox("BOM and CPL files have been exported to project folder.");
+
+} else {	// if (board) board(B)
+  dlgMessageBox("!Run this ULP from a Board", "OK");
+  exit (0);
+}

@@ -1,9 +1,12 @@
 # JLCPCB-Basic-Parts
 JL@C PCB Basic Parts Eagle Library with LCSC Part Numbers
 
-This is a very first release of the library.
-Do not use for production. Library has several issues with component rotation.
+This is a BETA release of the library. There is a selection of the very basic components,
 
 Please report any issues. Thank you.
 
-1/12/2020 - I have added ULP scripts that can generate BOM and CPL files that are suitable for JLC PCB direct upload.
+Version update:
+2021-11-30 - Complete new library plus one ULP script that generates perfect BOM and CPL files that can be uploades directly to JLCPCB web!
+
+
+
