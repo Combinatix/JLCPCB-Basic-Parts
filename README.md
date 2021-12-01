@@ -7,11 +7,9 @@ This is a BETA release of the library and the ULP. So far, there is a selection 
 - Basic SMD Inductors
 - Basic diodes
 - SOT-23 PNPs, NPNs, MOSFETs.
+- SOIC-8 Dual Op-Amps
 
 The device list should grow by time. Please report any issues. Thank you.
-
-Version update:
-2021-11-30 - Complete new library plus one ULP script that generates perfect BOM and CPL files that can be uploades directly to JLCPCB web!
 
 ---
 How to use:
