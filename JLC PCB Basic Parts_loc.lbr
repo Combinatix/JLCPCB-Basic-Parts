@@ -58,7 +58,7 @@
 			<layer number="98" name="Guide" color="6" fill="1" visible="yes" active="yes"/>
 		</layers>
 		<library>
-			<description>&lt;h1&gt;(JL@C) JLC PCB Basic Parts Eagle Library with LCSC Part Numbers&lt;/h1&gt; &lt;h2&gt;by Combinatix, &lt;a href='https://github.com/Combinatix/JLCPCB-Basic-Parts/'&gt;https://github.com/Combinatix/JLCPCB-Basic-Parts/&lt;/a&gt;&lt;/h2&gt; &lt;h3&gt;This library contains a selection of &lt;i&gt;BASIC&lt;/i&gt; parts supplied by JLC PCB manufacturer, including their order codes (LCSC Part Number)&lt;/h3&gt; &lt;hr&gt; &lt;p&gt;Every part has these attributes:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;&lt;b&gt;LCSC_DATASHEET&lt;/b&gt; = Datasheet url for the selected part&lt;/li&gt; &lt;li&gt;&lt;b&gt;LCSC_PART&lt;/b&gt; = LCSC Part numbers - it matches the products listed at &lt;a href="https://jlcpcb.com/parts"&gt;https://jlcpcb.com/parts&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;b&gt;LCSC_PRICE1_EUR&lt;/b&gt; = Price of EACH, if specified by JLC PCB in their export csv&lt;/li&gt; &lt;li&gt;&lt;b&gt;LCSC_ROTATION_CCW&lt;/b&gt; = Rotation correction that ULP script reads during CPL export. This can solve a package rotation incompatibility&lt;/li&gt; &lt;li&gt;&lt;b&gt;PROPERTIES&lt;/b&gt; = Part's basic properties for your quick reference.&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;Catalog Last Update: 2021-11-30&lt;/p&gt;</description>
+			<description>&lt;h1&gt;(JL@C) JLC PCB Basic Parts Eagle Library with LCSC Part Numbers&lt;/h1&gt; &lt;h2&gt;by Combinatix, &lt;a href='https://github.com/Combinatix/JLCPCB-Basic-Parts/'&gt;https://github.com/Combinatix/JLCPCB-Basic-Parts/&lt;/a&gt;&lt;/h2&gt; &lt;h3&gt;This library contains a selection of &lt;i&gt;BASIC&lt;/i&gt; parts supplied by JLC PCB manufacturer, including their order codes (LCSC Part Number)&lt;/h3&gt; &lt;hr&gt; &lt;p&gt;Every part has these attributes:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;&lt;b&gt;LCSC_DATASHEET&lt;/b&gt; = Datasheet url for the selected part&lt;/li&gt; &lt;li&gt;&lt;b&gt;LCSC_PART&lt;/b&gt; = LCSC Part numbers - it matches the products listed at &lt;a href="https://jlcpcb.com/parts"&gt;https://jlcpcb.com/parts&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;b&gt;LCSC_PRICE1_EUR&lt;/b&gt; = Price of EACH, if specified by JLC PCB in their export csv&lt;/li&gt; &lt;li&gt;&lt;b&gt;LCSC_ROTATION_CCW&lt;/b&gt; = Rotation correction that ULP script reads during CPL export. This can solve a package rotation incompatibility&lt;/li&gt; &lt;li&gt;&lt;b&gt;PROPERTIES&lt;/b&gt; = Part's basic properties for your quick reference.&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;Catalog Last Update: 2021-12-01&lt;/p&gt; &lt;b&gt;Version History:&lt;/b&gt; &lt;p&gt;2021-12-01: Added SMD Inductors 0402 - 1206. Updated and unified parts descriptions to be more consistent&lt;/p&gt; &lt;p&gt;2021-11-30: First BETA release. Library contains SMD Resistors, Capacitors, Diodes, SOT-23 Transistors&lt;/p&gt; &lt;p&gt;&lt;/p&gt;</description>
 			<packages>
 				<package name="MBS" urn="urn:adsk.eagle:footprint:25019411/1" locally_modified="yes">
 					<description>&lt;h1&gt;MBS&lt;/h1&gt; &lt;p&gt;Source: Comchip Bridge Rectifiers B05S-G_B10S-G.pdf&lt;/p&gt;</description>
@@ -1978,6 +1978,7 @@
 			</packages3d>
 			<symbols>
 				<symbol name="RECTIFIER_FULL" urn="urn:adsk.eagle:symbol:25019410/1" locally_modified="yes">
+					<description>&lt;h1&gt;Bridge Rectifier&lt;/h1&gt; Diode Full Bridge Rectifier, detailed symbol</description>
 					<wire x1="-1.905" y1="-3.175" x2="-4.064" y2="-2.794" width="0.254" layer="94"/>
 					<wire x1="-1.905" y1="-3.175" x2="-2.286" y2="-1.016" width="0.254" layer="94"/>
 					<wire x1="-2.7178" y1="-4.0386" x2="-0.9398" y2="-2.2606" width="0.254" layer="94"/>
@@ -2067,6 +2068,7 @@
 					<wire x1="1.27" y1="1.27" x2="0.508" y2="1.27" width="0.254" layer="94"/>
 				</symbol>
 				<symbol name="R-EU">
+					<description>&lt;h1&gt;Resistor&lt;/h1&gt; EU symbol</description>
 					<wire x1="-2.54" y1="-0.889" x2="2.54" y2="-0.889" width="0.254" layer="94"/>
 					<wire x1="2.54" y1="0.889" x2="-2.54" y2="0.889" width="0.254" layer="94"/>
 					<wire x1="2.54" y1="-0.889" x2="2.54" y2="0.889" width="0.254" layer="94"/>
@@ -2076,39 +2078,8 @@
 					<pin name="2" x="5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
 					<pin name="1" x="-5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
 				</symbol>
-				<symbol name="DB">
-					<wire x1="-1.905" y1="-3.175" x2="-4.064" y2="-2.794" width="0.254" layer="94"/>
-					<wire x1="-1.905" y1="-3.175" x2="-2.286" y2="-1.016" width="0.254" layer="94"/>
-					<wire x1="-2.7178" y1="-4.0386" x2="-0.9398" y2="-2.2606" width="0.254" layer="94"/>
-					<wire x1="-1.905" y1="3.175" x2="-4.064" y2="2.794" width="0.254" layer="94"/>
-					<wire x1="-1.905" y1="3.175" x2="-2.286" y2="1.016" width="0.254" layer="94"/>
-					<wire x1="-2.7178" y1="4.0386" x2="-1.0668" y2="2.3876" width="0.254" layer="94"/>
-					<wire x1="3.175" y1="1.905" x2="2.794" y2="4.064" width="0.254" layer="94"/>
-					<wire x1="3.175" y1="1.905" x2="1.016" y2="2.286" width="0.254" layer="94"/>
-					<wire x1="2.3622" y1="1.016" x2="4.1402" y2="2.794" width="0.254" layer="94"/>
-					<wire x1="3.175" y1="-1.905" x2="2.794" y2="-4.064" width="0.254" layer="94"/>
-					<wire x1="3.175" y1="-1.905" x2="1.016" y2="-2.286" width="0.254" layer="94"/>
-					<wire x1="2.3622" y1="-1.0668" x2="4.1402" y2="-2.8448" width="0.254" layer="94"/>
-					<wire x1="5.08" y1="0" x2="3.175" y2="-1.905" width="0.1524" layer="94"/>
-					<wire x1="0" y1="-5.08" x2="-1.905" y2="-3.175" width="0.1524" layer="94"/>
-					<wire x1="-3.2766" y1="-1.8034" x2="-5.08" y2="0" width="0.1524" layer="94"/>
-					<wire x1="-4.064" y1="-2.794" x2="-2.286" y2="-1.016" width="0.254" layer="94"/>
-					<wire x1="-5.08" y1="0" x2="-3.2766" y2="1.8034" width="0.1524" layer="94"/>
-					<wire x1="-4.064" y1="2.794" x2="-2.286" y2="1.016" width="0.254" layer="94"/>
-					<wire x1="-1.905" y1="3.175" x2="0" y2="5.08" width="0.1524" layer="94"/>
-					<wire x1="0" y1="5.08" x2="1.8034" y2="3.2766" width="0.1524" layer="94"/>
-					<wire x1="1.016" y1="2.286" x2="2.794" y2="4.064" width="0.254" layer="94"/>
-					<wire x1="3.175" y1="1.905" x2="5.08" y2="0" width="0.1524" layer="94"/>
-					<wire x1="0" y1="-5.08" x2="1.8034" y2="-3.2766" width="0.1524" layer="94"/>
-					<wire x1="1.016" y1="-2.286" x2="2.794" y2="-4.064" width="0.254" layer="94"/>
-					<text x="5.08" y="-5.08" size="1.778" layer="96">&gt;VALUE</text>
-					<text x="5.08" y="2.54" size="1.778" layer="95">&gt;NAME</text>
-					<pin name="AC1" x="0" y="5.08" visible="off" length="point" direction="pas" rot="R270"/>
-					<pin name="+" x="5.08" y="0" visible="off" length="point" direction="pas" rot="R180"/>
-					<pin name="AC2" x="0" y="-5.08" visible="off" length="point" direction="pas" rot="R90"/>
-					<pin name="-" x="-5.08" y="0" visible="off" length="point" direction="pas"/>
-				</symbol>
 				<symbol name="C-EU">
+					<description>&lt;h1&gt;Capacitor&lt;/h1&gt; EU symbol, non-polarized</description>
 					<wire x1="0" y1="0" x2="0" y2="-0.508" width="0.1524" layer="94"/>
 					<wire x1="0" y1="-2.54" x2="0" y2="-2.032" width="0.1524" layer="94"/>
 					<text x="1.524" y="0.381" size="1.778" layer="95">&gt;NAME</text>
@@ -2147,6 +2118,7 @@
 					<pin name="C" x="2.54" y="-5.08" visible="off" length="short" direction="pas" rot="R90"/>
 				</symbol>
 				<symbol name="D2-AK">
+					<description>&lt;h1&gt;Dual Diode&lt;/h1&gt; &lt;p&gt;Diodes are in series&lt;/p&gt;</description>
 					<wire x1="-3.81" y1="-1.27" x2="-1.27" y2="0" width="0.254" layer="94"/>
 					<wire x1="-1.27" y1="0" x2="-3.81" y2="1.27" width="0.254" layer="94"/>
 					<wire x1="-1.27" y1="1.27" x2="-1.27" y2="0" width="0.254" layer="94"/>
@@ -2170,6 +2142,7 @@
 					<pin name="K" x="5.08" y="0" visible="off" length="point" direction="pas" rot="R180"/>
 				</symbol>
 				<symbol name="D2-AA">
+					<description>&lt;h1&gt;Dual Diode&lt;/h1&gt; &lt;p&gt;Common Anode&lt;/p&gt;</description>
 					<wire x1="-1.27" y1="1.27" x2="-3.81" y2="0" width="0.254" layer="94"/>
 					<wire x1="-3.81" y1="0" x2="-1.27" y2="-1.27" width="0.254" layer="94"/>
 					<wire x1="-3.81" y1="-1.27" x2="-3.81" y2="0" width="0.254" layer="94"/>
@@ -2193,6 +2166,7 @@
 					<pin name="K2" x="5.08" y="0" visible="off" length="point" direction="pas" rot="R180"/>
 				</symbol>
 				<symbol name="D2-KK">
+					<description>&lt;h1&gt;Dual diode&lt;/h1&gt; &lt;p&gt;Common Cathode&lt;/p&gt;</description>
 					<wire x1="-3.81" y1="-1.27" x2="-1.27" y2="0" width="0.254" layer="94"/>
 					<wire x1="-1.27" y1="0" x2="-3.81" y2="1.27" width="0.254" layer="94"/>
 					<wire x1="-1.27" y1="1.27" x2="-1.27" y2="0" width="0.254" layer="94"/>
@@ -2335,6 +2309,14 @@
 					<wire x1="2.54" y1="2.54" x2="3.81" y2="2.54" width="0.1524" layer="94"/>
 					<wire x1="2.54" y1="2.54" x2="2.54" y2="0" width="0.1524" layer="94"/>
 				</symbol>
+				<symbol name="L-EU">
+					<description>&lt;h1&gt;Inductor&lt;/h1&gt;&lt;p&gt;European symbol&lt;/p&gt;</description>
+					<text x="-1.4986" y="-3.81" size="1.778" layer="95" rot="R90">&gt;NAME</text>
+					<text x="3.302" y="-3.81" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
+					<rectangle x1="-1.016" y1="-3.556" x2="1.016" y2="3.556" layer="94"/>
+					<pin name="2" x="0" y="-5.08" visible="off" length="short" direction="pas" swaplevel="1" rot="R90"/>
+					<pin name="1" x="0" y="5.08" visible="off" length="short" direction="pas" swaplevel="1" rot="R270"/>
+				</symbol>
 			</symbols>
 			<devicesets>
 				<deviceset name="DB_" urn="urn:adsk.eagle:component:25019413/2" locally_modified="yes" prefix="B">
@@ -2418,18 +2400,18 @@
 								<package3dinstance package3d_urn="urn:adsk.eagle:package:26308/8"/>
 							</package3dinstances>
 							<technologies>
-								<technology name="B5819W-SL_CHANGJ">
-									<attribute name="LCSC_PART" value="C8598" constant="no"/>
-									<attribute name="LCSC_PRICE1_EUR" value="0.035748031" constant="no"/>
-									<attribute name="PROPERTIES" value="40V 1A 600mV @ 1A SOD-123 Schottky Barrier Diodes (SBD) ROHS" constant="no"/>
-									<attribute name="LCSC_DATASHEET" value="https://datasheet.lcsc.com/lcsc/1809140216_Changjiang-Electronics-Tech--CJ-B5819W-SL_C8598.pdf" constant="no"/>
-									<attribute name="LCSC_ROTATION_CCW" value="0" constant="no"/>
-								</technology>
 								<technology name="1N4148W_ST">
 									<attribute name="LCSC_PART" value="C81598" constant="no"/>
 									<attribute name="LCSC_PRICE1_EUR" value="0.017165354" constant="no"/>
 									<attribute name="PROPERTIES" value="+150°C (Tj) 150mA - 4ns 1uA 75V 1.25V 150mA Single 400mW 75V SOD-123 Switching Diode ROHS" constant="no"/>
 									<attribute name="LCSC_DATASHEET" value="https://datasheet.lcsc.com/lcsc/1811061725_ST-Semtech-1N4148W_C81598.pdf" constant="no"/>
+									<attribute name="LCSC_ROTATION_CCW" value="0" constant="no"/>
+								</technology>
+								<technology name="B5819W-SL_CHANGJ">
+									<attribute name="LCSC_PART" value="C8598" constant="no"/>
+									<attribute name="LCSC_PRICE1_EUR" value="0.035748031" constant="no"/>
+									<attribute name="PROPERTIES" value="40V 1A 600mV @ 1A SOD-123 Schottky Barrier Diodes (SBD) ROHS" constant="no"/>
+									<attribute name="LCSC_DATASHEET" value="https://datasheet.lcsc.com/lcsc/1809140216_Changjiang-Electronics-Tech--CJ-B5819W-SL_C8598.pdf" constant="no"/>
 									<attribute name="LCSC_ROTATION_CCW" value="0" constant="no"/>
 								</technology>
 							</technologies>
@@ -2443,27 +2425,6 @@
 								<package3dinstance package3d_urn="urn:adsk.eagle:package:43416/2"/>
 							</package3dinstances>
 							<technologies>
-								<technology name="M7_MDD">
-									<attribute name="LCSC_PART" value="C95872" constant="no"/>
-									<attribute name="LCSC_PRICE1_EUR" value="0.012771654" constant="no"/>
-									<attribute name="PROPERTIES" value="1.1V 1A 1kV 5uA 1kV - 1A SMA(DO-214AC) Diodes - General Purpose ROHS" constant="no"/>
-									<attribute name="LCSC_DATASHEET" value="https://datasheet.lcsc.com/lcsc/1810311713_MDDㄗMicrodiode-Electronicsㄘ-M7_C95872.pdf" constant="no"/>
-									<attribute name="LCSC_ROTATION_CCW" value="0" constant="no"/>
-								</technology>
-								<technology name="SS210_MDD">
-									<attribute name="LCSC_PART" value="C14996" constant="no"/>
-									<attribute name="LCSC_PRICE1_EUR" value="0.048346457" constant="no"/>
-									<attribute name="PROPERTIES" value="100V 2A 850mV @ 2A SMA(DO-214AC) Schottky Barrier Diodes (SBD) ROHS" constant="no"/>
-									<attribute name="LCSC_DATASHEET" value="https://datasheet.lcsc.com/lcsc/1811071613_MDDㄗMicrodiode-Electronicsㄘ-SS210_C14996.pdf" constant="no"/>
-									<attribute name="LCSC_ROTATION_CCW" value="0" constant="no"/>
-								</technology>
-								<technology name="SS54_MDD">
-									<attribute name="LCSC_PART" value="C22452" constant="no"/>
-									<attribute name="LCSC_PRICE1_EUR" value="0.091023622" constant="no"/>
-									<attribute name="PROPERTIES" value="40V 5A 550mV @ 5A SMA(DO-214AC) Schottky Barrier Diodes (SBD) ROHS" constant="no"/>
-									<attribute name="LCSC_DATASHEET" value="https://datasheet.lcsc.com/lcsc/1810192041_MDDㄗMicrodiode-Electronicsㄘ-SS54_C22452.pdf" constant="no"/>
-									<attribute name="LCSC_ROTATION_CCW" value="0" constant="no"/>
-								</technology>
 								<technology name="SS14_MDD">
 									<attribute name="LCSC_PART" value="C2480" constant="no"/>
 									<attribute name="LCSC_PRICE1_EUR" value="0.031653543" constant="no"/>
@@ -2483,6 +2444,27 @@
 									<attribute name="LCSC_PRICE1_EUR" value="0.015905512" constant="no"/>
 									<attribute name="PROPERTIES" value="+150°C (Tj) 1.7V 1A 1A 1kV -50°C (Tj) 5uA 1kV Single 75ns SMA Diodes - Fast Recovery Rectifiers ROHS" constant="no"/>
 									<attribute name="LCSC_DATASHEET" value="https://datasheet.lcsc.com/lcsc/2007101707_MDDㄗMicrodiode-Electronicsㄘ-US1M_C412437.pdf" constant="no"/>
+									<attribute name="LCSC_ROTATION_CCW" value="0" constant="no"/>
+								</technology>
+								<technology name="M7_MDD">
+									<attribute name="LCSC_PART" value="C95872" constant="no"/>
+									<attribute name="LCSC_PRICE1_EUR" value="0.012771654" constant="no"/>
+									<attribute name="PROPERTIES" value="1.1V 1A 1kV 5uA 1kV - 1A SMA(DO-214AC) Diodes - General Purpose ROHS" constant="no"/>
+									<attribute name="LCSC_DATASHEET" value="https://datasheet.lcsc.com/lcsc/1810311713_MDDㄗMicrodiode-Electronicsㄘ-M7_C95872.pdf" constant="no"/>
+									<attribute name="LCSC_ROTATION_CCW" value="0" constant="no"/>
+								</technology>
+								<technology name="SS210_MDD">
+									<attribute name="LCSC_PART" value="C14996" constant="no"/>
+									<attribute name="LCSC_PRICE1_EUR" value="0.048346457" constant="no"/>
+									<attribute name="PROPERTIES" value="100V 2A 850mV @ 2A SMA(DO-214AC) Schottky Barrier Diodes (SBD) ROHS" constant="no"/>
+									<attribute name="LCSC_DATASHEET" value="https://datasheet.lcsc.com/lcsc/1811071613_MDDㄗMicrodiode-Electronicsㄘ-SS210_C14996.pdf" constant="no"/>
+									<attribute name="LCSC_ROTATION_CCW" value="0" constant="no"/>
+								</technology>
+								<technology name="SS54_MDD">
+									<attribute name="LCSC_PART" value="C22452" constant="no"/>
+									<attribute name="LCSC_PRICE1_EUR" value="0.091023622" constant="no"/>
+									<attribute name="PROPERTIES" value="40V 5A 550mV @ 5A SMA(DO-214AC) Schottky Barrier Diodes (SBD) ROHS" constant="no"/>
+									<attribute name="LCSC_DATASHEET" value="https://datasheet.lcsc.com/lcsc/1810192041_MDDㄗMicrodiode-Electronicsㄘ-SS54_C22452.pdf" constant="no"/>
 									<attribute name="LCSC_ROTATION_CCW" value="0" constant="no"/>
 								</technology>
 							</technologies>
@@ -2523,7 +2505,7 @@
 					</devices>
 				</deviceset>
 				<deviceset name="R_" prefix="R">
-					<description>&lt;h1&gt;Resistor&lt;/h1&gt;European symbol</description>
+					<description>&lt;h1&gt;Resistor&lt;/h1&gt; &lt;p&gt;General purpose SMD Resistor&lt;/p&gt;</description>
 					<gates>
 						<gate name="R1" symbol="R-EU" x="0" y="0"/>
 					</gates>
@@ -2998,7 +2980,7 @@
 								</technology>
 								<technology name="10M">
 									<attribute name="LCSC_PART" value="C7250" constant="no"/>
-									<attribute name="LCSC_PRICE1_EUR" value="0.002771654" constant="no"/>
+									<attribute name="LCSC_PRICE1_EUR" value="0.002834646" constant="no"/>
 									<attribute name="PROPERTIES" value="±1% ±200ppm 10MOhm 0.1W 0603  ROHS" constant="no"/>
 									<attribute name="LCSC_DATASHEET" value="https://datasheet.lcsc.com/lcsc/1811022110_UNI-ROYAL-Uniroyal-Elec-0603WAF1005T5E_C7250.pdf" constant="no"/>
 									<attribute name="LCSC_ROTATION_CCW" value="0" constant="no"/>
@@ -4605,7 +4587,7 @@
 					</devices>
 				</deviceset>
 				<deviceset name="C_" prefix="C">
-					<description>&lt;h1&gt;Capacitor&lt;/h1&gt; European symbol</description>
+					<description>&lt;h1&gt;Capacitor&lt;/h1&gt; &lt;p&gt;General purpose SMD Capacitor&lt;/p&gt;</description>
 					<gates>
 						<gate name="C1" symbol="C-EU" x="0" y="0"/>
 					</gates>
@@ -5794,6 +5776,149 @@
 									<attribute name="LCSC_PRICE1_EUR" value="0.091023622" constant="no"/>
 									<attribute name="PROPERTIES" value="0.112Ohm 2.8A,4.5V 1V 250uA 3.1A 0.86W 20V P Channel SOT-23(SOT-23-3) MOSFETs ROHS" constant="no"/>
 									<attribute name="LCSC_DATASHEET" value="https://datasheet.lcsc.com/lcsc/1808272021_Vishay-Intertech-SI2301CDS-T1-GE3_C10487.pdf" constant="no"/>
+									<attribute name="LCSC_ROTATION_CCW" value="0" constant="no"/>
+								</technology>
+							</technologies>
+						</device>
+					</devices>
+				</deviceset>
+				<deviceset name="L_" prefix="L">
+					<description>&lt;h1&gt;Inductor&lt;/h1&gt; &lt;p&gt;General purpose SMD Inductors&lt;/p&gt;</description>
+					<gates>
+						<gate name="L1" symbol="L-EU" x="0" y="0"/>
+					</gates>
+					<devices>
+						<device name="_0402" package="R0402">
+							<connects>
+								<connect gate="L1" pin="1" pad="1"/>
+								<connect gate="L1" pin="2" pad="2"/>
+							</connects>
+							<package3dinstances>
+								<package3dinstance package3d_urn="urn:adsk.eagle:package:23547/3"/>
+							</package3dinstances>
+							<technologies>
+								<technology name="10N">
+									<attribute name="LCSC_PART" value="C27147" constant="no"/>
+									<attribute name="LCSC_PRICE1_EUR" value="0.005212598" constant="no"/>
+									<attribute name="PROPERTIES" value="ManuPN: SDCL1005C10NJTDF 0402  ROHS" constant="no"/>
+									<attribute name="LCSC_DATASHEET" value="https://datasheet.lcsc.com/lcsc/1811111110_Sunlord-SDCL1005C10NJTDF_C27147.pdf" constant="no"/>
+									<attribute name="LCSC_ROTATION_CCW" value="0" constant="no"/>
+								</technology>
+								<technology name="15N">
+									<attribute name="LCSC_PART" value="C27143" constant="no"/>
+									<attribute name="LCSC_PRICE1_EUR" value="0.004629921" constant="no"/>
+									<attribute name="PROPERTIES" value="ManuPN: SDCL1005C15NJTDF 0402  ROHS" constant="no"/>
+									<attribute name="LCSC_DATASHEET" value="https://datasheet.lcsc.com/lcsc/1811021715_Sunlord-SDCL1005C15NJTDF_C27143.pdf" constant="no"/>
+									<attribute name="LCSC_ROTATION_CCW" value="0" constant="no"/>
+								</technology>
+								<technology name="3N9">
+									<attribute name="LCSC_PART" value="C14033" constant="no"/>
+									<attribute name="LCSC_PRICE1_EUR" value="0.004740157" constant="no"/>
+									<attribute name="PROPERTIES" value="ManuPN: SDCL1005C3N9STDF 0402  ROHS" constant="no"/>
+									<attribute name="LCSC_DATASHEET" value="https://datasheet.lcsc.com/lcsc/1811131630_Sunlord-SDCL1005C3N9STDF_C14033.pdf" constant="no"/>
+									<attribute name="LCSC_ROTATION_CCW" value="0" constant="no"/>
+								</technology>
+							</technologies>
+						</device>
+						<device name="_0603" package="R0603">
+							<connects>
+								<connect gate="L1" pin="1" pad="1"/>
+								<connect gate="L1" pin="2" pad="2"/>
+							</connects>
+							<package3dinstances>
+								<package3dinstance package3d_urn="urn:adsk.eagle:package:23555/3"/>
+							</package3dinstances>
+							<technologies>
+								<technology name="4R7">
+									<attribute name="LCSC_PART" value="C1034" constant="no"/>
+									<attribute name="LCSC_PRICE1_EUR" value="0.012551181" constant="no"/>
+									<attribute name="PROPERTIES" value="ManuPN: SDFL1608Q4R7KTF 0603  ROHS" constant="no"/>
+									<attribute name="LCSC_DATASHEET" value="https://datasheet.lcsc.com/lcsc/1811071713_Sunlord-SDFL1608Q4R7KTF_C1034.pdf" constant="no"/>
+									<attribute name="LCSC_ROTATION_CCW" value="0" constant="no"/>
+								</technology>
+								<technology name="100">
+									<attribute name="LCSC_PART" value="C1035" constant="no"/>
+									<attribute name="LCSC_PRICE1_EUR" value="0.012551181" constant="no"/>
+									<attribute name="PROPERTIES" value="ManuPN: SDFL1608S100KTF 0603  ROHS" constant="no"/>
+									<attribute name="LCSC_DATASHEET" value="https://datasheet.lcsc.com/lcsc/1811071720_Sunlord-SDFL1608S100KTF_C1035.pdf" constant="no"/>
+									<attribute name="LCSC_ROTATION_CCW" value="0" constant="no"/>
+								</technology>
+								<technology name="68N">
+									<attribute name="LCSC_PART" value="C13415" constant="no"/>
+									<attribute name="LCSC_PRICE1_EUR" value="0.011606299" constant="no"/>
+									<attribute name="PROPERTIES" value="ManuPN: SDCL1608C68NJTDF 0603  ROHS" constant="no"/>
+									<attribute name="LCSC_DATASHEET" value="https://datasheet.lcsc.com/lcsc/1811091217_Sunlord-SDCL1608C68NJTDF_C13415.pdf" constant="no"/>
+									<attribute name="LCSC_ROTATION_CCW" value="0" constant="no"/>
+								</technology>
+							</technologies>
+						</device>
+						<device name="_0805" package="R0805">
+							<connects>
+								<connect gate="L1" pin="1" pad="1"/>
+								<connect gate="L1" pin="2" pad="2"/>
+							</connects>
+							<package3dinstances>
+								<package3dinstance package3d_urn="urn:adsk.eagle:package:23553/2"/>
+							</package3dinstances>
+							<technologies>
+								<technology name="220">
+									<attribute name="LCSC_PART" value="C32375" constant="no"/>
+									<attribute name="LCSC_PRICE1_EUR" value="0.024724409" constant="no"/>
+									<attribute name="PROPERTIES" value="ManuPN: SDFL2012T220KTF 0805  ROHS" constant="no"/>
+									<attribute name="LCSC_DATASHEET" value="https://datasheet.lcsc.com/lcsc/2005061032_Sunlord-SDFL2012T220KTF_C32375.pdf" constant="no"/>
+									<attribute name="LCSC_ROTATION_CCW" value="0" constant="no"/>
+								</technology>
+								<technology name="1R0">
+									<attribute name="LCSC_PART" value="C1042" constant="no"/>
+									<attribute name="LCSC_PRICE1_EUR" value="0.017007874" constant="no"/>
+									<attribute name="PROPERTIES" value="ManuPN: SDFL2012Q1R0KTF 0805  ROHS" constant="no"/>
+									<attribute name="LCSC_DATASHEET" value="https://datasheet.lcsc.com/lcsc/1811111110_Sunlord-SDFL2012Q1R0KTF_C1042.pdf" constant="no"/>
+									<attribute name="LCSC_ROTATION_CCW" value="0" constant="no"/>
+								</technology>
+								<technology name="2R2">
+									<attribute name="LCSC_PART" value="C1043" constant="no"/>
+									<attribute name="LCSC_PRICE1_EUR" value="0.010251969" constant="no"/>
+									<attribute name="PROPERTIES" value="ManuPN: CMI201209U2R2KT 0805  ROHS" constant="no"/>
+									<attribute name="LCSC_DATASHEET" value="https://datasheet.lcsc.com/lcsc/1811061719_FH-Guangdong-Fenghua-Advanced-Tech-CMI201209U2R2KT_C1043.pdf" constant="no"/>
+									<attribute name="LCSC_ROTATION_CCW" value="0" constant="no"/>
+								</technology>
+								<technology name="100">
+									<attribute name="LCSC_PART" value="C1046" constant="no"/>
+									<attribute name="LCSC_PRICE1_EUR" value="0.019212598" constant="no"/>
+									<attribute name="PROPERTIES" value="ManuPN: SDFL2012S100KTF 0805  ROHS" constant="no"/>
+									<attribute name="LCSC_DATASHEET" value="https://datasheet.lcsc.com/lcsc/1811111140_Sunlord-SDFL2012S100KTF_C1046.pdf" constant="no"/>
+									<attribute name="LCSC_ROTATION_CCW" value="0" constant="no"/>
+								</technology>
+								<technology name="101">
+									<attribute name="LCSC_PART" value="C68035" constant="no"/>
+									<attribute name="LCSC_PRICE1_EUR" value="0.050708661" constant="no"/>
+									<attribute name="PROPERTIES" value="ManuPN: MLF2012C101KT000 0805  ROHS" constant="no"/>
+									<attribute name="LCSC_DATASHEET" value="https://datasheet.lcsc.com/lcsc/1810162253_TDK-MLF2012C101KT000_C68035.pdf" constant="no"/>
+									<attribute name="LCSC_ROTATION_CCW" value="0" constant="no"/>
+								</technology>
+							</technologies>
+						</device>
+						<device name="_1206" package="R1206">
+							<connects>
+								<connect gate="L1" pin="1" pad="1"/>
+								<connect gate="L1" pin="2" pad="2"/>
+							</connects>
+							<package3dinstances>
+								<package3dinstance package3d_urn="urn:adsk.eagle:package:23540/2"/>
+							</package3dinstances>
+							<technologies>
+								<technology name="4R7">
+									<attribute name="LCSC_PART" value="C1049" constant="no"/>
+									<attribute name="LCSC_PRICE1_EUR" value="0.017952756" constant="no"/>
+									<attribute name="PROPERTIES" value="ManuPN: CMI321609U4R7KT 1206  ROHS" constant="no"/>
+									<attribute name="LCSC_DATASHEET" value="https://datasheet.lcsc.com/lcsc/1810311322_FH-Guangdong-Fenghua-Advanced-Tech-CMI321609U4R7KT_C1049.pdf" constant="no"/>
+									<attribute name="LCSC_ROTATION_CCW" value="0" constant="no"/>
+								</technology>
+								<technology name="100">
+									<attribute name="LCSC_PART" value="C1051" constant="no"/>
+									<attribute name="LCSC_PRICE1_EUR" value="0.022519685" constant="no"/>
+									<attribute name="PROPERTIES" value="ManuPN: CMI321609X100KT 1206  ROHS" constant="no"/>
+									<attribute name="LCSC_DATASHEET" value="https://datasheet.lcsc.com/lcsc/1810311314_FH-Guangdong-Fenghua-Advanced-Tech-CMI321609X100KT_C1051.pdf" constant="no"/>
 									<attribute name="LCSC_ROTATION_CCW" value="0" constant="no"/>
 								</technology>
 							</technologies>
