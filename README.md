@@ -2,8 +2,9 @@
 ## Eagle Library with the JLC PCB Basic Parts and their corresponding LCSC Part Numbers. A special ULP script is included for the easiest BOM and CPL export ever!
 
 This is a BETA release of the library and the ULP. So far, there is a selection of the very basic components. The library contains:
-- All SMD resistors of 0402,0603,0805,1206 sizes
-- All SMD capacitors of 0402,0603,0805,1206 sizes
+- All SMD resistors of 0402, 0603, 0805, 1206 sizes
+- All SMD capacitors of 0402, 0603, 0805, 1206 sizes
+- Basic SMD Inductors
 - Basic diodes
 - SOT-23 PNPs, NPNs, MOSFETs.
 
