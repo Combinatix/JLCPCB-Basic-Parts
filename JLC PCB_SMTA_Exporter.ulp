@@ -20,9 +20,9 @@ Project home: https://github.com/Combinatix/JLCPCB-Basic-Parts
        "<h2>Generates BOM and CPL files for JLCPCB SMT assembly service</h2>"
        "<a href='https://jlcpcb.com/'>https://jlcpcb.com/</a>"
        "<p>Run the ULP from the board editor</p>"
+       "<author>Author: OXullo Intersecans x@brainrapers.org</author>"
        "<p>Modified by Combinatix to match his JLCPCB-Basic-Parts.lbr</p>"
        "<h3>Project home: <a href='https://github.com/Combinatix/JLCPCB-Basic-Parts'>https://github.com/Combinatix/JLCPCB-Basic-Parts</a></h3>"
-       "<author>Author: OXullo Intersecans x@brainrapers.org</author>"
 
 // ________________________________________________________________________________________________________________________________
 // Globals
@@ -95,7 +95,8 @@ if (board) board(B) {
 
         for (int i = 0 ; i < element_count ; ++i) {
             UL_ELEMENT E = selected_elements[i];
-            int angle = E.angle + 180;
+            int angle = E.angle;
+			
 			// Add attribute rotation correction
             E.attributes(A) {
                 if (A.name == "LCSC_ROTATION_CCW") {
@@ -105,16 +106,12 @@ if (board) board(B) {
 					}
                 }
             }
-			// Mirror the part when Bottom Layer - not needed aymore
-            // if (layer_name_map[layer_choice] == "Bottom") {
-				// angle = angle + 180;
-					// if (angle >= 360){
-						// angle = angle - 360;
-					// }
-				// angle = (360 - angle);
-				// angle = angle + 180;
-				// angle = angle % 360;
-            // }
+			
+			// Mirror the part whe bottom layer
+            if (layer_name_map[layer_choice] == "Bottom") {
+              angle = (360 - angle);
+              angle = angle % 360;
+            }
             real ang = angle;
             printf("%s,%5.2f,%5.2f,%s,%.1f\n", E.name, u2mm(E.x), u2mm(E.y), layer_name_map[layer_choice], ang);
         }
