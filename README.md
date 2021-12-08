@@ -6,7 +6,7 @@ This is a BETA release of the library and the ULP. So far, there is a selection 
 - All SMD capacitors of 0402, 0603, 0805, 1206 sizes
 - Basic SMD Inductors
 - Basic diodes
-- SOT-23 PNPs, NPNs, MOSFETs.
+- SOT-23 Bipolar and MOSFET Transistors
 - SOIC-8 Dual Op-Amps
 
 The device list should grow by time. Please report any issues. Thank you.
@@ -20,10 +20,10 @@ Place the `JLC PCB_SMTA_Exporter.ulp` into your homedir/ulps
 
 Activate the library from the Eagle's Control Panel
 
-Now create your schematics
+Now create your schematics and board
 
-When ready, generate gerber files from the Board Editor by pressing the greenish Factory icon
+When ready, generate the gerber files from the Board Editor by pressing the greenish Factory icon
 
-Execute the `JLC PCB_SMTA_Exporter.ulp` (again, from the board editor. Don't forget to choose the correct location from the dropdown list)
+Execute the `JLC PCB_SMTA_Exporter.ulp` (again, from the board editor. Set the dropdown list to your user script location to see the script)
 
 Go to JLCPCB.com and upload your files. You don't have to modify anything.
