@@ -1,4 +1,4 @@
-# JLC PCB Basic Parts.lbr
+# JLCPCB Eagle Library - Basic Parts
 ## Eagle Library with the JLC PCB Basic Parts and their corresponding LCSC Part Numbers. A special ULP script is included for the easiest BOM and CPL export ever!
 
 This is a BETA release of the library and the ULP. So far, there is a selection of the very basic components. The library contains:
