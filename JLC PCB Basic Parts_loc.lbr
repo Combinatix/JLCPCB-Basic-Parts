@@ -6,7 +6,7 @@
 			<setting alwaysvectorfont="no"/>
 			<setting verticaltext="up"/>
 		</settings>
-		<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
+		<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 		<layers>
 			<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 			<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -2466,50 +2466,7 @@
 							<package3dinstances>
 								<package3dinstance package3d_urn="urn:adsk.eagle:package:43416/2"/>
 							</package3dinstances>
-							<technologies>
-								<technology name="SS14_MDD">
-									<attribute name="LCSC_PART" value="C2480" constant="no"/>
-									<attribute name="LCSC_PRICE1_EUR" value="0.031653543" constant="no"/>
-									<attribute name="PROPERTIES" value="40V 1A 550mV @ 1A SMA(DO-214AC) Schottky Barrier Diodes (SBD) ROHS" constant="no"/>
-									<attribute name="LCSC_DATASHEET" value="https://datasheet.lcsc.com/lcsc/2105061432_MDDㄗMicrodiode-Electronicsㄘ-SS14_C2480.pdf" constant="no"/>
-									<attribute name="LCSC_ROTATION_CCW" value="180" constant="no"/>
-								</technology>
-								<technology name="SS34_MDD">
-									<attribute name="LCSC_PART" value="C8678" constant="no"/>
-									<attribute name="LCSC_PRICE1_EUR" value="0.060314961" constant="no"/>
-									<attribute name="PROPERTIES" value="40V 3A 550mV @ 3A SMA(DO-214AC) Schottky Barrier Diodes (SBD) ROHS" constant="no"/>
-									<attribute name="LCSC_DATASHEET" value="https://datasheet.lcsc.com/lcsc/2105061435_MDDㄗMicrodiode-Electronicsㄘ-SS34_C8678.pdf" constant="no"/>
-									<attribute name="LCSC_ROTATION_CCW" value="180" constant="no"/>
-								</technology>
-								<technology name="M7_MDD">
-									<attribute name="LCSC_PART" value="C95872" constant="no"/>
-									<attribute name="LCSC_PRICE1_EUR" value="0.012771654" constant="no"/>
-									<attribute name="PROPERTIES" value="1.1V 1A 1kV 5uA 1kV - 1A SMA(DO-214AC) Diodes - General Purpose ROHS" constant="no"/>
-									<attribute name="LCSC_DATASHEET" value="https://datasheet.lcsc.com/lcsc/1810311713_MDDㄗMicrodiode-Electronicsㄘ-M7_C95872.pdf" constant="no"/>
-									<attribute name="LCSC_ROTATION_CCW" value="180" constant="no"/>
-								</technology>
-								<technology name="SS210_MDD">
-									<attribute name="LCSC_PART" value="C14996" constant="no"/>
-									<attribute name="LCSC_PRICE1_EUR" value="0.048346457" constant="no"/>
-									<attribute name="PROPERTIES" value="100V 2A 850mV @ 2A SMA(DO-214AC) Schottky Barrier Diodes (SBD) ROHS" constant="no"/>
-									<attribute name="LCSC_DATASHEET" value="https://datasheet.lcsc.com/lcsc/1811071613_MDDㄗMicrodiode-Electronicsㄘ-SS210_C14996.pdf" constant="no"/>
-									<attribute name="LCSC_ROTATION_CCW" value="180" constant="no"/>
-								</technology>
-								<technology name="SS54_MDD">
-									<attribute name="LCSC_PART" value="C22452" constant="no"/>
-									<attribute name="LCSC_PRICE1_EUR" value="0.091023622" constant="no"/>
-									<attribute name="PROPERTIES" value="40V 5A 550mV @ 5A SMA(DO-214AC) Schottky Barrier Diodes (SBD) ROHS" constant="no"/>
-									<attribute name="LCSC_DATASHEET" value="https://datasheet.lcsc.com/lcsc/1810192041_MDDㄗMicrodiode-Electronicsㄘ-SS54_C22452.pdf" constant="no"/>
-									<attribute name="LCSC_ROTATION_CCW" value="180" constant="no"/>
-								</technology>
-								<technology name="US1M_MDD">
-									<attribute name="LCSC_PART" value="C412437" constant="no"/>
-									<attribute name="LCSC_PRICE1_EUR" value="0.015905512" constant="no"/>
-									<attribute name="PROPERTIES" value="+150°C (Tj) 1.7V 1A 1A 1kV -50°C (Tj) 5uA 1kV Single 75ns SMA Diodes - Fast Recovery Rectifiers ROHS" constant="no"/>
-									<attribute name="LCSC_DATASHEET" value="https://datasheet.lcsc.com/lcsc/2007101707_MDDㄗMicrodiode-Electronicsㄘ-US1M_C412437.pdf" constant="no"/>
-									<attribute name="LCSC_ROTATION_CCW" value="180" constant="no"/>
-								</technology>
-							</technologies>
+							<technologies/>
 						</device>
 					</devices>
 				</deviceset>
@@ -4652,7 +4609,7 @@
 								</technology>
 								<technology name="10UF/6.3V">
 									<attribute name="LCSC_PART" value="C15525" constant="no"/>
-									<attribute name="LCSC_PRICE1_EUR" value="0.009637795" constant="no"/>
+									<attribute name="LCSC_PRICE1_EUR" value="0.009527559" constant="no"/>
 									<attribute name="PROPERTIES" value="X5R 6.3V ±20% 10uF 0402  ROHS" constant="no"/>
 									<attribute name="LCSC_DATASHEET" value="https://datasheet.lcsc.com/lcsc/1810191215_Samsung-Electro-Mechanics-CL05A106MQ5NUNC_C15525.pdf" constant="no"/>
 									<attribute name="LCSC_ROTATION_CCW" value="0" constant="no"/>
@@ -4806,7 +4763,7 @@
 								</technology>
 								<technology name="100PF/50V">
 									<attribute name="LCSC_PART" value="C1546" constant="no"/>
-									<attribute name="LCSC_PRICE1_EUR" value="0.002188976" constant="no"/>
+									<attribute name="LCSC_PRICE1_EUR" value="0.002913386" constant="no"/>
 									<attribute name="PROPERTIES" value="C0G ±5% 50V 100pF 0402  ROHS" constant="no"/>
 									<attribute name="LCSC_DATASHEET" value="https://datasheet.lcsc.com/lcsc/1810151218_FH-Guangdong-Fenghua-Advanced-Tech-0402CG101J500NT_C1546.pdf" constant="no"/>
 									<attribute name="LCSC_ROTATION_CCW" value="0" constant="no"/>
@@ -4904,7 +4861,7 @@
 								</technology>
 								<technology name="2.2UF/6.3V">
 									<attribute name="LCSC_PART" value="C12530" constant="no"/>
-									<attribute name="LCSC_PRICE1_EUR" value="0.004141732" constant="no"/>
+									<attribute name="LCSC_PRICE1_EUR" value="0.00407874" constant="no"/>
 									<attribute name="PROPERTIES" value="X5R 6.3V 2.2uF ±20% 0402  ROHS" constant="no"/>
 									<attribute name="LCSC_DATASHEET" value="https://datasheet.lcsc.com/lcsc/1811021410_Samsung-Electro-Mechanics-CL05A225MQ5NSNC_C12530.pdf" constant="no"/>
 									<attribute name="LCSC_ROTATION_CCW" value="0" constant="no"/>
@@ -5786,6 +5743,13 @@
 									<attribute name="LCSC_DATASHEET" value="https://datasheet.lcsc.com/lcsc/1810151612_Changjiang-Electronics-Tech--CJ-2N7002_C8545.pdf" constant="no"/>
 									<attribute name="LCSC_ROTATION_CCW" value="180" constant="no"/>
 								</technology>
+								<technology name="AO3400A_ALPHA">
+									<attribute name="LCSC_PART" value="C20917" constant="no"/>
+									<attribute name="LCSC_PRICE1_EUR" value="0.14015748" constant="no"/>
+									<attribute name="PROPERTIES" value="1.4W 0.0265Ohm 5.7A,10V 30V 5.7A N Channel 1.5V 250uA SOT-23-3L MOSFETs ROHS" constant="no"/>
+									<attribute name="LCSC_DATASHEET" value="https://datasheet.lcsc.com/lcsc/1811081213_Alpha-&amp;-Omega-Semicon-AO3400A_C20917.pdf" constant="no"/>
+									<attribute name="LCSC_ROTATION_CCW" value="180" constant="no"/>
+								</technology>
 							</technologies>
 						</device>
 					</devices>
@@ -5818,6 +5782,13 @@
 									<attribute name="LCSC_PRICE1_EUR" value="0.091023622" constant="no"/>
 									<attribute name="PROPERTIES" value="0.112Ohm 2.8A,4.5V 1V 250uA 3.1A 0.86W 20V P Channel SOT-23(SOT-23-3) MOSFETs ROHS" constant="no"/>
 									<attribute name="LCSC_DATASHEET" value="https://datasheet.lcsc.com/lcsc/1808272021_Vishay-Intertech-SI2301CDS-T1-GE3_C10487.pdf" constant="no"/>
+									<attribute name="LCSC_ROTATION_CCW" value="180" constant="no"/>
+								</technology>
+								<technology name="AO3401A_ALPHA">
+									<attribute name="LCSC_PART" value="C15127" constant="no"/>
+									<attribute name="LCSC_PRICE1_EUR" value="0.12015748" constant="no"/>
+									<attribute name="PROPERTIES" value="1.4W 0.044Ohm 4.3A,10V 30V 1.3V 250uA P Channel 4A SOT-23-3L MOSFETs ROHS" constant="no"/>
+									<attribute name="LCSC_DATASHEET" value="https://datasheet.lcsc.com/lcsc/1810171817_Alpha-&amp;-Omega-Semicon-AO3401A_C15127.pdf" constant="no"/>
 									<attribute name="LCSC_ROTATION_CCW" value="180" constant="no"/>
 								</technology>
 							</technologies>
@@ -5967,8 +5938,8 @@
 						</device>
 					</devices>
 				</deviceset>
-				<deviceset name="DUAL_" prefix="U">
-					<description>&lt;h1&gt;Dual Op-Amp / Comparator&lt;/h1&gt; &lt;p&gt;SMD Dual Operation Amplifier with standard wiring&lt;/p&gt;</description>
+				<deviceset name="OPAMP2_" prefix="U">
+					<description>&lt;h1&gt;Operation Amplifier&lt;/h1&gt; &lt;p&gt;SMD Single Opamp&lt;/p&gt;</description>
 					<gates>
 						<gate name="A" symbol="OPAMP" x="0" y="0" swaplevel="1"/>
 						<gate name="B" symbol="OPAMP" x="30.48" y="0" swaplevel="1"/>
@@ -5999,13 +5970,6 @@
 									<attribute name="LCSC_PRICE1_EUR" value="0.119527559" constant="no"/>
 									<attribute name="PROPERTIES" value="1MHz 2 General Purpose 1.5mA 0.6 V/us 3V ~ 32V, ±1.5V ~ 16V SOIC-8_150mil General Purpose Amplifiers ROHS" constant="no"/>
 									<attribute name="LCSC_DATASHEET" value="https://datasheet.lcsc.com/lcsc/1811100911_ON-Semiconductor-LM358DR2G_C7950.pdf" constant="no"/>
-									<attribute name="LCSC_ROTATION_CCW" value="0" constant="no"/>
-								</technology>
-								<technology name="LM393DR2G">
-									<attribute name="LCSC_PART" value="C7955" constant="no"/>
-									<attribute name="LCSC_PRICE1_EUR" value="0.120629921" constant="no"/>
-									<attribute name="PROPERTIES" value="CMOS, DTL, ECL, MOS, Open-Collector, TTL 2.5mA - 2 2V~36V,±1V~18V SOIC-8_150mil Comparators ROHS" constant="no"/>
-									<attribute name="LCSC_DATASHEET" value="https://datasheet.lcsc.com/lcsc/1809171611_ON-Semiconductor-LM393DR2G_C7955.pdf" constant="no"/>
 									<attribute name="LCSC_ROTATION_CCW" value="0" constant="no"/>
 								</technology>
 								<technology name="NE5532DR">
