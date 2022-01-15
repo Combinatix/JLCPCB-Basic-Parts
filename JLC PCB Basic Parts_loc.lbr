@@ -3814,7 +3814,7 @@
 									<attribute name="LCSC_DATASHEET" value="https://datasheet.lcsc.com/lcsc/1809212110_UNI-ROYAL-Uniroyal-Elec-0805W8F1801T5E_C17398.pdf" constant="no"/>
 									<attribute name="LCSC_ROTATION_CCW" value="0" constant="no"/>
 								</technology>
-								<technology name="100K">
+								<technology name="100K0">
 									<attribute name="LCSC_PART" value="C17407" constant="no"/>
 									<attribute name="LCSC_PRICE1_EUR" value="" constant="no"/>
 									<attribute name="PROPERTIES" value="100kOhm 0805  ROHS" constant="no"/>
