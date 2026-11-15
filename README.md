@@ -1,33 +1,44 @@
-# JLCPCB Eagle Library - Basic Parts
-## Eagle Library with the JLC PCB Basic Parts and their corresponding LCSC Part Numbers. A special ULP script is included for the easiest BOM and CPL export ever!
+# JLCPCB EAGLE Library – Basic Parts
 
-# DISASTER! The download link for the CSV Catalog has disappeared from the LCSC site. 
-## I cannot update the library anymore. Does anyone know the way of downloading the CSV from the LCSC? Please contact me!!!
+An EAGLE library containing JLCPCB Basic Parts with their corresponding LCSC part numbers. Includes a custom ULP script for easy BOM and CPL file generation.
 
+## ⚠️ Project Discontinued – EAGLE Is Dead
 
-This is a BETA release of the library and the ULP. So far, there is a selection of the very basic components. The library contains:
-- All SMD resistors of 0402, 0603, 0805, 1206 sizes
-- All SMD capacitors of 0402, 0603, 0805, 1206 sizes
-- Basic SMD Inductors
-- Basic diodes
-- SOT-23 Bipolar and MOSFET Transistors
-- SOIC-8 Dual Op-Amps
+**This project is no longer maintained.**
 
-The device list should grow by time. Please report any issues. Thank you.
+Autodesk EAGLE has reached the end of its life as a standalone product, and I have decided to discontinue further development of this library and its accompanying ULP script.
+
+The project will remain available for archival purposes and for anyone still using EAGLE.
+
+Thank you to everyone who found this project useful!
+
+## About the Library
+
+This was originally released as a beta version of the library and ULP script, covering a selection of commonly used components:
+
+- SMD resistors in 0402, 0603, 0805, and 1206 packages
+- SMD capacitors in 0402, 0603, 0805, and 1206 packages
+- Basic SMD inductors
+- Common diodes
+- SOT-23 bipolar and MOSFET transistors
+- SOIC-8 dual operational amplifiers
+
+**Known limitation:** The original CSV catalog download link disappeared from the LCSC website, preventing further automated library updates.
+
+## Installation and Usage
+
+1. Copy `JLC PCB Basic Parts_loc.lbr` to your EAGLE `libraries` directory.
+2. Copy `JLC PCB_SMTA_Exporter.ulp` to your EAGLE `ulps` directory.
+3. Activate the library in the EAGLE Control Panel.
+4. Create your schematic and PCB layout as usual.
+5. Generate the Gerber files from the Board Editor using the green Factory icon.
+6. Run `JLC PCB_SMTA_Exporter.ulp` from the Board Editor. Select your user scripts directory from the dropdown menu if necessary.
+7. Upload the generated files to JLCPCB.
+
+The ULP script was designed to generate BOM and CPL files compatible with JLCPCB's SMT assembly service, without requiring manual modifications.
 
 ---
-How to use:
 
-Place the `JLC PCB Basic Parts_loc.lbr` into your homedir/libraries
+**Project status: Discontinued / Archived**
 
-Place the `JLC PCB_SMTA_Exporter.ulp` into your homedir/ulps
-
-Activate the library from the Eagle's Control Panel
-
-Now create your schematics and board
-
-When ready, generate the gerber files from the Board Editor by pressing the greenish Factory icon
-
-Execute the `JLC PCB_SMTA_Exporter.ulp` (again, from the board editor. Set the dropdown list to your user script location to see the script)
-
-Go to JLCPCB.com and upload your files. You don't have to modify anything.
+No further updates, component additions, or bug fixes are planned.
